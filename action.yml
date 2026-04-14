@@ -1,0 +1,51 @@
+name: 'NotifyAll'
+description: 'Send notifications to Slack, Discord, or Microsoft Teams via webhooks with a single unified interface.'
+branding:
+  icon: 'bell'
+  color: 'yellow'
+
+inputs:
+  webhook_url:
+    description: 'The webhook URL (Slack, Discord, or Teams). Auto-detects platform from URL.'
+    required: true
+
+  title:
+    description: 'Notification title / summary.'
+    required: true
+
+  message:
+    description: 'Notification body / description.'
+    required: false
+    default: ''
+
+  status:
+    description: 'Status indicator: success, failure, warning, info. Affects color/emoji.'
+    required: false
+    default: 'info'
+
+  fields:
+    description: 'JSON object of key-value pairs to display as fields (e.g. {"Repo": "myapp", "Branch": "main"}).'
+    required: false
+    default: '{}'
+
+  footer:
+    description: 'Footer text (e.g. run URL, timestamp).'
+    required: false
+    default: ''
+
+  platform:
+    description: 'Force platform: slack, discord, teams. If empty, auto-detected from webhook URL.'
+    required: false
+    default: ''
+
+outputs:
+  status:
+    description: 'HTTP status code from the webhook response.'
+  success:
+    description: 'Whether the notification was sent successfully (true/false).'
+  platform:
+    description: 'The detected or specified platform.'
+
+runs:
+  using: 'node20'
+  main: 'index.js'

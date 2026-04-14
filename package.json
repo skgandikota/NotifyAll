@@ -1,0 +1,23 @@
+{
+  "name": "notifyall",
+  "version": "1.0.0",
+  "description": "GitHub Action to send notifications to Slack, Discord, or Microsoft Teams via webhooks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skgandikota/NotifyAll.git"
+  },
+  "keywords": ["github-action", "notification", "slack", "discord", "teams", "webhook"],
+  "author": "Saikoushik Gandikota",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skgandikota/NotifyAll/issues"
+  },
+  "homepage": "https://github.com/skgandikota/NotifyAll#readme",
+  "dependencies": {
+    "@actions/core": "^3.0.0"
+  }
+}
