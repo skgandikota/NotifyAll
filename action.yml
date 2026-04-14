@@ -1,4 +1,4 @@
-name: 'NotifyAll'
+name: 'Webhook Notify'
 description: 'Send notifications to Slack, Discord, or Microsoft Teams via webhooks with a single unified interface.'
 branding:
   icon: 'bell'
